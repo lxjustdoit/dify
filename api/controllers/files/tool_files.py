@@ -8,7 +8,7 @@ from controllers.common.errors import UnsupportedFileTypeError
 from controllers.files import api
 from core.tools.signature import verify_tool_file_signature
 from core.tools.tool_file_manager import ToolFileManager
-from models import db as global_db
+from extensions.ext_database import db as global_db
 
 
 class ToolFilePreviewApi(Resource):

@@ -14,15 +14,15 @@ from core.model_manager import ModelInstance, ModelManager
 from core.model_runtime.entities.llm_entities import LLMUsage
 from core.model_runtime.entities.model_entities import ModelType
 from core.model_runtime.model_providers.__base.large_language_model import LargeLanguageModel
-from core.plugin.entities.plugin import ModelProviderID
 from core.prompt.entities.advanced_prompt_entities import MemoryConfig
 from core.variables.segments import ArrayAnySegment, ArrayFileSegment, FileSegment, NoneSegment, StringSegment
-from core.workflow.entities.variable_pool import VariablePool
+from core.workflow.entities import VariablePool
 from core.workflow.enums import SystemVariableKey
 from core.workflow.nodes.llm.entities import ModelConfig
-from models import db
+from extensions.ext_database import db
 from models.model import Conversation
 from models.provider import Provider, ProviderType
+from models.provider_ids import ModelProviderID
 
 from .exc import InvalidVariableTypeError, LLMModeRequiredError, ModelNotExistError
 
